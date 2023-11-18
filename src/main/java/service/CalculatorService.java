@@ -6,19 +6,19 @@ import org.springframework.stereotype.Service;
 public class CalculatorService {
 
 
-    public Number plus(Number a, Number b) {
+    public Number plus(Integer a, Integer b) {
         return a.doubleValue() + b.doubleValue();
     }
 
-    public Number minus(Number a, Number b) {
+    public Number minus(Integer a, Integer b) {
         return a.doubleValue() - b.doubleValue();
     }
 
-    public Number multiply(Number a, Number b) {
+    public Number multiply(Integer a, Integer b) {
         return a.doubleValue() * b.doubleValue();
     }
 
-    public Number divide(Number a, Number b) {
+    public Number divide(Integer a, Integer b) {
         return a.doubleValue() / b.doubleValue();
     }
 
