@@ -19,26 +19,26 @@ public class CalculatorController {
             return "Добро пожаловать в калькулятор!";
         }
         @GetMapping("/plus")
-        public String plus (@RequestParam(value = "num1", required = false) Number a,
-                @RequestParam(value = "num2", required = false) Number b){
+        public String plus (@RequestParam(value = "num1", required = false) Integer a,
+                @RequestParam(value = "num2", required = false) Integer b){
             return calculate(a,b, "+");
         }
         @GetMapping("/minus")
-        public String minus (@RequestParam(value = "num1", required = false) Number a,
-                @RequestParam(value = "num2", required = false) Number b){
+        public String minus (@RequestParam(value = "num1", required = false) Integer a,
+                @RequestParam(value = "num2", required = false) Integer b){
             return calculate(a, b, "-");
         }
         @GetMapping("/multiply")
-        public String multiply (@RequestParam(value = "num1", required = false) Number a,
-                @RequestParam(value = "num2", required = false) Number b){
+        public String multiply (@RequestParam(value = "num1", required = false) Integer a,
+                @RequestParam(value = "num2", required = false) Integer b){
             return calculate(a, b, "*");
         }
         @GetMapping("/divide")
-        public String divide (@RequestParam(value = "num1", required = false) Number a,
-                @RequestParam(value = "num2", required = false) Number b){
+        public String divide (@RequestParam(value = "num1", required = false) Integer a,
+                @RequestParam(value = "num2", required = false) Integer b){
             return calculate(a, b, "/");
         }
-        private String calculate (Number a, Number b, String operation){
+        private String calculate (Integer a, Integer b, String operation){
             if (a == null || b == null) {
                 return "Какой-то из параметров не передан!";
             }
